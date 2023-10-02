@@ -87,12 +87,28 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Stc-az-ZpW">
                                         <rect key="frame" x="-2" y="0.0" width="157" height="31"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                        <color key="maximumTrackTintColor" systemColor="systemRedColor"/>
+                                        <color key="thumbTintColor" systemColor="systemGroupedBackgroundColor"/>
+                                        <connections>
+                                            <action selector="redSliderPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="JXy-x2-Tt0"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zQQ-d3-TrK">
                                         <rect key="frame" x="-2" y="53" width="157" height="31"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <color key="maximumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="redSliderPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Med-t8-huj"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-ML-tcx">
                                         <rect key="frame" x="-2" y="106" width="157" height="31"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                        <color key="maximumTrackTintColor" systemColor="systemBlueColor"/>
+                                        <connections>
+                                            <action selector="redSliderPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pak-71-3hH"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
@@ -116,6 +132,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b0a-XM-QgE" secondAttribute="bottom" constant="89" id="yJ0-QW-GQE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="70n-yY-eiZ" id="rAv-rS-rKS"/>
+                        <outlet property="blueSlider" destination="pBW-ML-tcx" id="z1c-cr-Z9J"/>
+                        <outlet property="coloringView" destination="w6h-aj-fa6" id="3MY-q5-NO6"/>
+                        <outlet property="greenLabel" destination="0Bf-BU-3WA" id="8QS-2T-NUq"/>
+                        <outlet property="greenSlider" destination="zQQ-d3-TrK" id="5P6-Lu-tzB"/>
+                        <outlet property="redLabel" destination="Rsj-eN-Fwg" id="uhc-U3-4h6"/>
+                        <outlet property="redSlider" destination="Stc-az-ZpW" id="vlm-5V-L58"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,6 +150,18 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
